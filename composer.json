@@ -1,0 +1,55 @@
+{
+    "name": "dicr/yii2-topvisor",
+    "type": "yii2-extension",
+    "license": "MIT",
+    "homepage": "https://gitlab.com/dicr/yii2-topvisor",
+    "description": "TopVisor API for Yii2",
+    "keywords": ["dicr", "yii2", "topvisor"],
+    "authors": [
+        {
+            "name": "Igor A Tarasov",
+            "email": "develop@dicr.org",
+            "homepage": "http://dicr.org",
+            "role": "developer"
+        }
+    ],
+    "support": {
+        "source": "https://gitlab.com/dicr/yii2-topvisor.git"
+    },
+    "autoload": {
+        "psr-4": {
+            "dicr\\topvisor\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "dicr\\tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "RC",
+    "prefer-stable": true,
+    "require": {
+        "php": "~7.4 || ~8.0.1",
+
+        "ext-curl": "*",
+        "ext-json": "*",
+
+        "yiisoft/yii2": "~2.0",
+
+        "dicr/yii2-json": "~2.0",
+        "dicr/yii2-helper": "~4.5",
+        "dicr/yii2-http": "~2.2",
+        "dicr/yii2-validate": "~2.3"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "phpunit/phpunit": "~9.5"
+    },
+    "repositories": [
+        {"type": "composer", "url": "https://asset-packagist.org"},
+        {"type": "git", "url": "https://gitlab.com/dicr/yii2-json.git"},
+        {"type": "git", "url": "https://gitlab.com/dicr/yii2-helper.git"},
+        {"type": "git", "url": "https://gitlab.com/dicr/yii2-http.git"},
+        {"type": "git", "url": "https://gitlab.com/dicr/yii2-validate.git"}
+    ]
+}
