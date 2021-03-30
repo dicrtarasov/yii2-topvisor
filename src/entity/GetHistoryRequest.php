@@ -3,7 +3,7 @@
  * @copyright 2019-2021 Dicr http://dicr.org
  * @author Igor A Tarasov <develop@dicr.org>
  * @license MIT
- * @version 29.03.21 02:20:34
+ * @version 30.03.21 19:00:28
  */
 
 declare(strict_types = 1);
@@ -26,7 +26,7 @@ class GetHistoryRequest extends GetRequest
     /** @var int весь период без ограничений */
     public const TYPE_RANGE_ALL = 0;
 
-    /** @var int только апдейты Яндекса */
+    /** @var int только обновления Яндекса */
     public const TYPE_RANGE_UPDATES = 1;
 
     /** @var int период до 31 даты */
@@ -53,7 +53,7 @@ class GetHistoryRequest extends GetRequest
     /** @var string[] тип выбора дат из диапазона */
     public const TYPE_RANGE = [
         self::TYPE_RANGE_ALL => 'весь период без ограничений',
-        self::TYPE_RANGE_UPDATES => 'только апдейты',
+        self::TYPE_RANGE_UPDATES => 'только обновления Яндекса',
         self::TYPE_RANGE_PERIOD31 => 'период до 31 даты',
         self::TYPE_RANGE_TWO_DATE => 'две даты',
         self::TYPE_RANGE_ONE_DATE => 'одна дата',
