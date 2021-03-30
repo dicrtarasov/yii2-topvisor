@@ -3,7 +3,7 @@
  * @copyright 2019-2021 Dicr http://dicr.org
  * @author Igor A Tarasov <develop@dicr.org>
  * @license MIT
- * @version 29.03.21 02:20:34
+ * @version 30.03.21 16:31:35
  */
 
 declare(strict_types = 1);
@@ -23,6 +23,9 @@ use function is_array;
  */
 abstract class GetRequest extends TopVisorRequest
 {
+    /** @var int максимальный размер страницы */
+    public const LIMIT_MAX = 10000;
+
     /** @var ?int фильтр объектов по id */
     public $id;
 
@@ -82,7 +85,7 @@ abstract class GetRequest extends TopVisorRequest
             ['offset', 'filter', 'filter' => 'intval', 'skipOnEmpty' => true],
 
             ['limit', 'default'],
-            ['limit', 'integer', 'min' => 1, 'max' => 10000],
+            ['limit', 'integer', 'min' => 1, 'max' => self::LIMIT_MAX],
             ['limit', 'filter', 'filter' => 'intval', 'skipOnEmpty' => true]
         ]);
     }
