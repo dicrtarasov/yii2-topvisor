@@ -3,7 +3,7 @@
  * @copyright 2019-2021 Dicr http://dicr.org
  * @author Igor A Tarasov <develop@dicr.org>
  * @license MIT
- * @version 29.03.21 02:20:34
+ * @version 30.03.21 15:30:08
  */
 
 declare(strict_types = 1);
@@ -121,4 +121,7 @@ class Project extends TopVisorEntity
 
     /** @var array Информация о домене */
     public $domainExpire;
+
+    /** @var ?array поисковики-регионы (если задано showSearchersAndRegions) */
+    public $searchers;
 }
