@@ -8,7 +8,7 @@
 $config = [
     'components' => [
         'topvisor' => [
-            'class' => dicr\topvisor\TopVisor::class,
+            'class' => dicr\topvisor\TopVisorApi::class,
             'userId' => '<UserID из личного кабинета>',
             'apiKey' => '<ключ API из личного кабинета>'
         ]
@@ -19,7 +19,7 @@ $config = [
 ## Использование
 
 ```php
-/** @var dicr\topvisor\TopVisor */
+/** @var dicr\topvisor\TopVisorApi */
 $api = Yii::$app->get('topvisor');
 
 // получение списка проектов

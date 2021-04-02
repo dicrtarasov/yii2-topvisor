@@ -3,14 +3,14 @@
  * @copyright 2019-2021 Dicr http://dicr.org
  * @author Igor A Tarasov <develop@dicr.org>
  * @license MIT
- * @version 29.03.21 02:20:34
+ * @version 02.04.21 05:15:11
  */
 
 declare(strict_types = 1);
 namespace dicr\topvisor\entity;
 
 use dicr\topvisor\GetRequest;
-use dicr\topvisor\Values;
+use dicr\topvisor\TopVisor;
 
 use function array_merge;
 
@@ -41,7 +41,7 @@ class GetKeywordsRequest extends GetRequest
             ['projectId', 'filter', 'filter' => 'intval'],
 
             ['currency', 'default'],
-            ['currency', 'in', 'range' => array_keys(Values::CURRENCY)],
+            ['currency', 'in', 'range' => array_keys(TopVisor::CURRENCY)],
 
             ['showTrash', 'default'],
             ['showTrash', 'boolean'],

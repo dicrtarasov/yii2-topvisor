@@ -3,7 +3,7 @@
  * @copyright 2019-2021 Dicr http://dicr.org
  * @author Igor A Tarasov <develop@dicr.org>
  * @license MIT
- * @version 29.03.21 02:20:34
+ * @version 02.04.21 05:15:11
  */
 
 declare(strict_types = 1);
@@ -19,7 +19,7 @@ use dicr\topvisor\entity\Group;
 use dicr\topvisor\entity\HistoryResult;
 use dicr\topvisor\entity\Keyword;
 use dicr\topvisor\entity\Project;
-use dicr\topvisor\TopVisor;
+use dicr\topvisor\TopVisorApi;
 use PHPUnit\Framework\TestCase;
 use Yii;
 use yii\base\Exception;
@@ -38,10 +38,10 @@ class GetTest extends TestCase
     /**
      * Модуль.
      *
-     * @return TopVisor
+     * @return TopVisorApi
      * @throws InvalidConfigException
      */
-    private static function api(): TopVisor
+    private static function api(): TopVisorApi
     {
         return Yii::$app->get('topvisor');
     }

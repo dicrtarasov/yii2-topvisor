@@ -3,7 +3,7 @@
  * @copyright 2019-2021 Dicr http://dicr.org
  * @author Igor A Tarasov <develop@dicr.org>
  * @license MIT
- * @version 29.03.21 02:20:34
+ * @version 02.04.21 05:15:11
  */
 
 declare(strict_types = 1);
@@ -20,16 +20,16 @@ use yii\httpclient\Request;
  */
 abstract class TopVisorRequest extends TopVisorEntity
 {
-    /** @var TopVisor */
+    /** @var TopVisorApi */
     protected $api;
 
     /**
      * TopVisorRequest constructor.
      *
-     * @param TopVisor $api
+     * @param TopVisorApi $api
      * @param array $config
      */
-    public function __construct(TopVisor $api, array $config = [])
+    public function __construct(TopVisorApi $api, array $config = [])
     {
         $this->api = $api;
 

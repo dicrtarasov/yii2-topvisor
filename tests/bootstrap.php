@@ -4,7 +4,7 @@
  * @copyright 2019-2021 Dicr http://dicr.org
  * @author Igor A Tarasov <develop@dicr.org>
  * @license MIT
- * @version 29.03.21 02:20:34
+ * @version 02.04.21 05:15:11
  */
 declare(strict_types = 1);
 
@@ -33,7 +33,7 @@ new yii\console\Application([
             ]
         ],
         'topvisor' => [
-            'class' => dicr\topvisor\TopVisor::class,
+            'class' => dicr\topvisor\TopVisorApi::class,
             'userId' => USER_ID,
             'apiKey' => API_KEY
         ]
