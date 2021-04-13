@@ -3,7 +3,7 @@
  * @copyright 2019-2021 Dicr http://dicr.org
  * @author Igor A Tarasov <develop@dicr.org>
  * @license MIT
- * @version 30.03.21 18:59:21
+ * @version 13.04.21 09:39:58
  */
 
 declare(strict_types = 1);
@@ -68,7 +68,7 @@ class Project extends TopVisorEntity
     /** @var int (bool) Статус проверки частоты */
     public $statusVolumes;
 
-    /** @var int (bool) Статус кластеризации */
+    /** @var int (bool) Статус кластеризации (безграмотные, б-ть) */
     public $statusClaster;
 
     // === Настройки проверки позиций =========================

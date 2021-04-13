@@ -13,19 +13,23 @@
             "role": "developer"
         }
     ],
+
     "support": {
         "source": "https://gitlab.com/dicr/yii2-topvisor.git"
     },
+
     "autoload": {
         "psr-4": {
             "dicr\\topvisor\\": "src/"
         }
     },
+
     "autoload-dev": {
         "psr-4": {
             "dicr\\tests\\": "tests/"
         }
     },
+
     "minimum-stability": "RC",
     "prefer-stable": true,
     "require": {
@@ -41,10 +45,12 @@
         "dicr/yii2-http": "~2.2",
         "dicr/yii2-validate": "~2.3"
     },
+
     "require-dev": {
         "roave/security-advisories": "dev-latest",
         "phpunit/phpunit": "~9.5"
     },
+
     "repositories": [
         {"type": "composer", "url": "https://asset-packagist.org"},
         {"type": "git", "url": "https://gitlab.com/dicr/yii2-json.git"},

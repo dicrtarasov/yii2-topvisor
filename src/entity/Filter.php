@@ -3,7 +3,7 @@
  * @copyright 2019-2021 Dicr http://dicr.org
  * @author Igor A Tarasov <develop@dicr.org>
  * @license MIT
- * @version 29.03.21 02:20:34
+ * @version 13.04.21 09:37:17
  */
 
 declare(strict_types = 1);
@@ -104,7 +104,7 @@ class Filter extends TopVisorEntity
     /** @var string оператор сравнения */
     public $operator;
 
-    /** @var string[] массив со значениями фильтра */
+    /** @var string[]|string массив со значениями фильтра */
     public $values;
 
     /**
@@ -116,9 +116,10 @@ class Filter extends TopVisorEntity
             ['name', 'trim'],
             ['name', 'required'],
 
-            ['op', 'required'],
-            ['op', 'in', array_keys(self::OP)],
+            ['operator', 'required'],
+            ['operator', 'in', 'range' => array_keys(self::OP)],
 
+            ['values', 'default', 'value' => []],
             ['values', function(string $attribute) {
                 static $opNoOperand = [
                     self::OP_IS_NULL, self::OP_IS_NOT_NULL
@@ -130,19 +131,22 @@ class Filter extends TopVisorEntity
                     self::OP_REGEXP, self::OP_NOT_REGEXP
                 ];
 
+                if (empty($this->values)) {
+                    $this->values = [];
+                } elseif (! is_array($this->values)) {
+                    $this->values = [$this->values];
+                }
+
                 if (in_array($this->operator, $opNoOperand)) {
                     /** @noinspection NotOptimalIfConditionsInspection */
-                    if (empty($this->values)) {
-                        $this->values = [];
-                    } else {
+                    if (! empty($this->values)) {
                         $this->addError($attribute, 'Оператор не требует операндов');
                     }
                 } elseif (in_array($this->operator, $opSingleOperand)) {
-                    /** @noinspection NotOptimalIfConditionsInspection */
-                    if (! is_array($this->values) || count($this->values) !== 1) {
+                    if (count($this->values) !== 1) {
                         $this->addError($attribute, 'Оператор требует один операнд');
                     }
-                } elseif (empty($this->values) || ! is_array($this->values)) {
+                } elseif (empty($this->values)) {
                     $this->addError($attribute, 'Оператор требует наличие операндов');
                 }
             }]
