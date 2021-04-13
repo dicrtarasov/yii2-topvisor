@@ -3,7 +3,7 @@
  * @copyright 2019-2021 Dicr http://dicr.org
  * @author Igor A Tarasov <develop@dicr.org>
  * @license MIT
- * @version 13.04.21 09:37:17
+ * @version 13.04.21 09:43:43
  */
 
 declare(strict_types = 1);
@@ -131,7 +131,7 @@ class Filter extends TopVisorEntity
                     self::OP_REGEXP, self::OP_NOT_REGEXP
                 ];
 
-                if (empty($this->values)) {
+                if ($this->values === null || $this->values === '') {
                     $this->values = [];
                 } elseif (! is_array($this->values)) {
                     $this->values = [$this->values];
