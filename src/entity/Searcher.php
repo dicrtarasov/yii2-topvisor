@@ -9,13 +9,13 @@
 declare(strict_types = 1);
 namespace dicr\topvisor\entity;
 
-use dicr\topvisor\TopVisorEntity;
+use dicr\topvisor\Entity;
 
 /**
  * Информация о поисковике.
  * Возвращается в GetProjectsRequest при show_searchers_and_regions = 1.
  */
-class Searcher extends TopVisorEntity
+class Searcher extends Entity
 {
     /** @var int какой-то id (вероятно набора параметров) */
     public $id;

@@ -9,14 +9,14 @@
 declare(strict_types = 1);
 namespace dicr\topvisor\entity;
 
-use dicr\topvisor\TopVisorEntity;
+use dicr\topvisor\Entity;
 
 /**
  * Данные о позиции поисковой фразы.
  *
  * @link https://topvisor.com/ru/api/v2-services/positions_2/get-history/
  */
-class PositionsData extends TopVisorEntity
+class PositionsData extends Entity
 {
     /** @var int|string Позиция запроса или "--" */
     public $position;

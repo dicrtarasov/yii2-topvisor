@@ -23,15 +23,15 @@ $config = [
 $api = Yii::$app->get('topvisor');
 
 // получение списка проектов
-/** @var dicr\topvisor\entity\GetProjectsRequest $request */
+/** @var dicr\topvisor\request\GetProjectsRequest $request */
 $request = $api->request([
-    'class' => dicr\topvisor\entity\GetProjectsRequest::class,
+    'class' => dicr\topvisor\request\GetProjectsRequest::class,
     'fields' => ['id', 'name'],
     'limit' => 10
 ]);
 
 // отправляем запрос
-/** @var dicr\topvisor\entity\GetProjectsResponse $response */
+/** @var dicr\topvisor\request\GetProjectsResponse $response */
 $response = $request->send();
 
 // выводим результат

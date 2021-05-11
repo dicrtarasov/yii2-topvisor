@@ -14,7 +14,7 @@ use dicr\json\JsonEntity;
 /**
  * Элемент данных TopVisor
  */
-abstract class TopVisorEntity extends JsonEntity
+abstract class Entity extends JsonEntity
 {
     // noop
 }

@@ -9,7 +9,7 @@
 declare(strict_types = 1);
 namespace dicr\topvisor\entity;
 
-use dicr\topvisor\TopVisorEntity;
+use dicr\topvisor\Entity;
 
 /**
  * Проект.
@@ -18,7 +18,7 @@ use dicr\topvisor\TopVisorEntity;
  *
  * @link https://topvisor.com/ru/api/v2-services/projects_2/projects/
  */
-class Project extends TopVisorEntity
+class Project extends Entity
 {
     /** @var int ID проекта */
     public $id;

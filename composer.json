@@ -2,14 +2,15 @@
     "name": "dicr/yii2-topvisor",
     "type": "yii2-extension",
     "license": "MIT",
-    "homepage": "https://gitlab.com/dicr/yii2-topvisor",
     "description": "TopVisor API for Yii2",
     "keywords": ["dicr", "yii2", "topvisor"],
+    "homepage": "https://gitlab.com/dicr/yii2-topvisor",
+
     "authors": [
         {
             "name": "Igor A Tarasov",
             "email": "develop@dicr.org",
-            "homepage": "http://dicr.org",
+            "homepage": "https://dicr.org",
             "role": "developer"
         }
     ],
@@ -34,7 +35,6 @@
     "prefer-stable": true,
     "require": {
         "php": "~7.4 || ~8.0.1",
-
         "ext-curl": "*",
         "ext-json": "*",
 
@@ -42,7 +42,7 @@
 
         "dicr/yii2-json": "~2.0",
         "dicr/yii2-helper": "~4.5",
-        "dicr/yii2-http": "~2.2",
+        "dicr/yii2-http": "~2.4",
         "dicr/yii2-validate": "~2.3"
     },
 

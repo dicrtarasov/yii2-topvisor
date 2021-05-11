@@ -3,13 +3,13 @@
  * @copyright 2019-2021 Dicr http://dicr.org
  * @author Igor A Tarasov <develop@dicr.org>
  * @license MIT
- * @version 29.03.21 02:20:34
+ * @version 11.05.21 12:45:17
  */
 
 declare(strict_types = 1);
-namespace dicr\topvisor\entity;
+namespace dicr\topvisor\request;
 
-use dicr\topvisor\GetRequest;
+use dicr\topvisor\GetDataRequest;
 
 use function array_merge;
 
@@ -18,7 +18,7 @@ use function array_merge;
  *
  * @link https://topvisor.com/ru/api/v2-services/projects_2/projects/
  */
-class GetProjectsRequest extends GetRequest
+class GetProjectsRequest extends GetDataRequest
 {
     /**
      * @var int (bool) Добавить в результат дополнительную информацию (кол-во страниц в индексе, кол-во ссылок, тИЦ,

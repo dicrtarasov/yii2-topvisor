@@ -9,7 +9,7 @@
 declare(strict_types = 1);
 namespace dicr\topvisor\entity;
 
-use dicr\topvisor\TopVisorEntity;
+use dicr\topvisor\Entity;
 
 use function count;
 use function in_array;
@@ -24,7 +24,7 @@ use function is_array;
  *
  * @link https://topvisor.com/ru/api/v2/basic-params/filters/
  */
-class Filter extends TopVisorEntity
+class Filter extends Entity
 {
     /** @var string равно указанному значению (=) */
     public const OP_EQUALS = 'EQUALS';

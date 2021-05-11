@@ -9,7 +9,7 @@
 declare(strict_types = 1);
 namespace dicr\topvisor\entity;
 
-use dicr\topvisor\TopVisorEntity;
+use dicr\topvisor\Entity;
 
 use const SORT_ASC;
 use const SORT_DESC;
@@ -19,7 +19,7 @@ use const SORT_DESC;
  *
  * @link https://topvisor.com/ru/api/v2/basic-params/orders/?activeTab=fields-2
  */
-class Order extends TopVisorEntity
+class Order extends Entity
 {
     /** @var string по возрастанию */
     public const DIRECTION_ASC = 'ASC';

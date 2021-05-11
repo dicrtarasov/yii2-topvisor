@@ -9,7 +9,7 @@
 declare(strict_types = 1);
 namespace dicr\topvisor\entity;
 
-use dicr\topvisor\TopVisorEntity;
+use dicr\topvisor\Entity;
 
 /**
  * Ключевая фраза.
@@ -18,7 +18,7 @@ use dicr\topvisor\TopVisorEntity;
  *
  * @link https://topvisor.com/ru/api/v2-services/keywords_2/keywords/
  */
-class Keyword extends TopVisorEntity
+class Keyword extends Entity
 {
     /** @var int ID ключевой фразы */
     public $id;

@@ -9,7 +9,7 @@
 declare(strict_types = 1);
 namespace dicr\topvisor\entity;
 
-use dicr\topvisor\TopVisorEntity;
+use dicr\topvisor\Entity;
 
 /**
  * Папка групп запросов.
@@ -18,7 +18,7 @@ use dicr\topvisor\TopVisorEntity;
  *
  * @link https://topvisor.com/ru/api/v2-services/keywords_2/folders/
  */
-class Folder extends TopVisorEntity
+class Folder extends Entity
 {
     /** @var int ID папки */
     public $id;

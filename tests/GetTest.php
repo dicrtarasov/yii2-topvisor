@@ -10,15 +10,15 @@ declare(strict_types = 1);
 namespace dicr\tests;
 
 use dicr\topvisor\entity\Folder;
-use dicr\topvisor\entity\GetFoldersRequest;
-use dicr\topvisor\entity\GetGroupsRequest;
-use dicr\topvisor\entity\GetHistoryRequest;
-use dicr\topvisor\entity\GetKeywordsRequest;
-use dicr\topvisor\entity\GetProjectsRequest;
 use dicr\topvisor\entity\Group;
 use dicr\topvisor\entity\HistoryResult;
 use dicr\topvisor\entity\Keyword;
 use dicr\topvisor\entity\Project;
+use dicr\topvisor\request\GetFoldersRequest;
+use dicr\topvisor\request\GetGroupsRequest;
+use dicr\topvisor\request\GetHistoryRequest;
+use dicr\topvisor\request\GetKeywordsRequest;
+use dicr\topvisor\request\GetProjectsRequest;
 use dicr\topvisor\TopVisorApi;
 use PHPUnit\Framework\TestCase;
 use Yii;
@@ -69,7 +69,7 @@ class GetTest extends TestCase
      */
     public function testGetFolders(): void
     {
-        /** @var GetFoldersRequest $request */
+        /** @var \dicr\topvisor\request\GetFoldersRequest $request */
         $request = self::api()->request([
             'class' => GetFoldersRequest::class,
             'projectId' => PROJECT_ID
@@ -103,7 +103,7 @@ class GetTest extends TestCase
      */
     public function testGetKeywords(): void
     {
-        /** @var GetKeywordsRequest $request */
+        /** @var \dicr\topvisor\request\GetKeywordsRequest $request */
         $request = self::api()->request([
             'class' => GetKeywordsRequest::class,
             'projectId' => PROJECT_ID,

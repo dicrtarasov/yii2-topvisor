@@ -3,13 +3,13 @@
  * @copyright 2019-2021 Dicr http://dicr.org
  * @author Igor A Tarasov <develop@dicr.org>
  * @license MIT
- * @version 29.03.21 02:20:34
+ * @version 11.05.21 13:01:51
  */
 
 declare(strict_types = 1);
 namespace dicr\topvisor\entity;
 
-use dicr\topvisor\TopVisorEntity;
+use dicr\topvisor\Entity;
 
 use function array_merge;
 
@@ -18,7 +18,7 @@ use function array_merge;
  *
  * @link https://topvisor.com/ru/api/v2-services/positions_2/get-history/
  */
-class HistoryResult extends TopVisorEntity
+class HistoryResult extends Entity
 {
     /** @var Keyword[] поисковые фразы с PositionsData */
     public $keywords;

@@ -3,22 +3,21 @@
  * @copyright 2019-2021 Dicr http://dicr.org
  * @author Igor A Tarasov <develop@dicr.org>
  * @license MIT
- * @version 29.03.21 02:20:34
+ * @version 11.05.21 12:45:17
  */
 
 declare(strict_types = 1);
-namespace dicr\topvisor\entity;
+namespace dicr\topvisor\request;
 
-use dicr\topvisor\GetResponse;
-
-use function array_merge;
+use dicr\topvisor\entity\Group;
+use dicr\topvisor\GetDataResponse;
 
 /**
- * Ответ на запрос списка проектов.
+ * Ответ на запрос списка групп.
  *
- * @property Project[]|null $result
+ * @property Group[]|null $result
  */
-class GetProjectsResponse extends GetResponse
+class GetGroupsResponse extends GetDataResponse
 {
     /**
      * @inheritDoc
@@ -26,7 +25,7 @@ class GetProjectsResponse extends GetResponse
     public function attributeEntities(): array
     {
         return array_merge(parent::attributeEntities(), [
-            'result' => [Project::class]
+            'result' => [Group::class]
         ]);
     }
 }

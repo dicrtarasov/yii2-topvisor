@@ -15,7 +15,7 @@ use dicr\topvisor\entity\Error;
 /**
  * Ответ TopVisor
  */
-class TopVisorResponse extends TopVisorEntity
+class TopVisorResponse extends Entity
 {
     /** @var ?array результат запроса */
     public $result;

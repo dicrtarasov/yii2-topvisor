@@ -3,22 +3,23 @@
  * @copyright 2019-2021 Dicr http://dicr.org
  * @author Igor A Tarasov <develop@dicr.org>
  * @license MIT
- * @version 29.03.21 02:20:34
+ * @version 11.05.21 12:45:17
  */
 
 declare(strict_types = 1);
-namespace dicr\topvisor\entity;
+namespace dicr\topvisor\request;
 
-use dicr\topvisor\GetResponse;
+use dicr\topvisor\entity\Project;
+use dicr\topvisor\GetDataResponse;
 
 use function array_merge;
 
 /**
- * Class GetHistoryResponse
+ * Ответ на запрос списка проектов.
  *
- * @property ?HistoryResult $result
+ * @property Project[]|null $result
  */
-class GetHistoryResponse extends GetResponse
+class GetProjectsResponse extends GetDataResponse
 {
     /**
      * @inheritDoc
@@ -26,7 +27,7 @@ class GetHistoryResponse extends GetResponse
     public function attributeEntities(): array
     {
         return array_merge(parent::attributeEntities(), [
-            'result' => HistoryResult::class
+            'result' => [Project::class]
         ]);
     }
 }

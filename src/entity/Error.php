@@ -9,12 +9,12 @@
 declare(strict_types = 1);
 namespace dicr\topvisor\entity;
 
-use dicr\topvisor\TopVisorEntity;
+use dicr\topvisor\Entity;
 
 /**
  * Информация об ошибке.
  */
-class Error extends TopVisorEntity
+class Error extends Entity
 {
     /** @var int */
     public $code;

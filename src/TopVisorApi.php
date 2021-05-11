@@ -36,6 +36,7 @@ class TopVisorApi extends Component
     public $httpClient = [
         'class' => CachingClient::class,
         'cacheDuration' => 86400,
+        'cacheMethods' => ['GET', 'POST'],
         'transport' => CurlTransport::class,
         'baseUrl' => 'https://api.topvisor.com/v2/json',
         'requestConfig' => [
@@ -45,7 +46,6 @@ class TopVisorApi extends Component
             ],
             'options' => [
                 'userAgent' => 'dicr/yii2-topvisor',
-                'followLocation' => false,
                 CURLOPT_ENCODING => ''
             ],
             'format' => Client::FORMAT_JSON

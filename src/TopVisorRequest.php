@@ -18,7 +18,7 @@ use yii\httpclient\Request;
 /**
  * Запрос TopVisor
  */
-abstract class TopVisorRequest extends TopVisorEntity
+abstract class TopVisorRequest extends Entity
 {
     /** @var TopVisorApi */
     protected $api;

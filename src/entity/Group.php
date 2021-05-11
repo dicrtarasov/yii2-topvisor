@@ -9,7 +9,7 @@
 declare(strict_types = 1);
 namespace dicr\topvisor\entity;
 
-use dicr\topvisor\TopVisorEntity;
+use dicr\topvisor\Entity;
 
 /**
  * Группа поисковых фраз.
@@ -21,7 +21,7 @@ use dicr\topvisor\TopVisorEntity;
  *
  * @link https://topvisor.com/ru/api/v2-services/keywords_2/groups/
  */
-class Group extends TopVisorEntity
+class Group extends Entity
 {
     /** @var int ID группы */
     public $id;

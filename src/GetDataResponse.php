@@ -12,7 +12,7 @@ namespace dicr\topvisor;
 /**
  * Ответ за запрос получения данных.
  */
-abstract class GetResponse extends TopVisorResponse
+abstract class GetDataResponse extends TopVisorResponse
 {
     /** @var ?int общее количество результатов */
     public $total;

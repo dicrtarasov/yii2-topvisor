@@ -9,7 +9,7 @@
 declare(strict_types = 1);
 namespace dicr\topvisor\entity;
 
-use dicr\topvisor\TopVisorEntity;
+use dicr\topvisor\Entity;
 
 /**
  * Информация о регине поиска.
@@ -31,7 +31,7 @@ use dicr\topvisor\TopVisorEntity;
  * 'domain':'.ru'
  * }
  */
-class Region extends TopVisorEntity
+class Region extends Entity
 {
     /** @var int ID набора параметров поиска */
     public $id;

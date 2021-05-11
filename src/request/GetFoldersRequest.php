@@ -3,13 +3,13 @@
  * @copyright 2019-2021 Dicr http://dicr.org
  * @author Igor A Tarasov <develop@dicr.org>
  * @license MIT
- * @version 29.03.21 02:20:34
+ * @version 11.05.21 12:45:17
  */
 
 declare(strict_types = 1);
-namespace dicr\topvisor\entity;
+namespace dicr\topvisor\request;
 
-use dicr\topvisor\GetRequest;
+use dicr\topvisor\GetDataRequest;
 
 use function array_keys;
 
@@ -18,7 +18,7 @@ use function array_keys;
  *
  * @link https://topvisor.com/ru/api/v2-services/keywords_2/folders/get/
  */
-class GetFoldersRequest extends GetRequest
+class GetFoldersRequest extends GetDataRequest
 {
     /** @var string стандартный массив результатов */
     public const VIEW_FLAT = 'flat';

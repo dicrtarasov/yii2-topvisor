@@ -3,13 +3,13 @@
  * @copyright 2019-2021 Dicr http://dicr.org
  * @author Igor A Tarasov <develop@dicr.org>
  * @license MIT
- * @version 02.04.21 05:15:11
+ * @version 11.05.21 12:45:17
  */
 
 declare(strict_types = 1);
-namespace dicr\topvisor\entity;
+namespace dicr\topvisor\request;
 
-use dicr\topvisor\GetRequest;
+use dicr\topvisor\GetDataRequest;
 use dicr\topvisor\TopVisor;
 
 use function array_merge;
@@ -19,7 +19,7 @@ use function array_merge;
  *
  * @link https://topvisor.com/ru/api/v2-services/keywords_2/keywords/
  */
-class GetKeywordsRequest extends GetRequest
+class GetKeywordsRequest extends GetDataRequest
 {
     /** @var int ID проекта */
     public $projectId;

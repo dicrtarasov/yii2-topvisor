@@ -21,7 +21,7 @@ use function is_array;
 /**
  * Запрос списка данных TopVisor
  */
-abstract class GetRequest extends TopVisorRequest
+abstract class GetDataRequest extends TopVisorRequest
 {
     /** @var int максимальный размер страницы */
     public const LIMIT_MAX = 10000;

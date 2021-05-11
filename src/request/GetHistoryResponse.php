@@ -3,20 +3,23 @@
  * @copyright 2019-2021 Dicr http://dicr.org
  * @author Igor A Tarasov <develop@dicr.org>
  * @license MIT
- * @version 29.03.21 02:20:34
+ * @version 11.05.21 12:45:17
  */
 
 declare(strict_types = 1);
-namespace dicr\topvisor\entity;
+namespace dicr\topvisor\request;
 
-use dicr\topvisor\GetResponse;
+use dicr\topvisor\entity\HistoryResult;
+use dicr\topvisor\GetDataResponse;
+
+use function array_merge;
 
 /**
- * Ответ на запрос списка ключевых слов.
+ * Class GetHistoryResponse
  *
- * @property Keyword[]|null $result
+ * @property ?HistoryResult $result
  */
-class GetKeywordsResponse extends GetResponse
+class GetHistoryResponse extends GetDataResponse
 {
     /**
      * @inheritDoc
@@ -24,7 +27,7 @@ class GetKeywordsResponse extends GetResponse
     public function attributeEntities(): array
     {
         return array_merge(parent::attributeEntities(), [
-            'result' => [Keyword::class]
+            'result' => HistoryResult::class
         ]);
     }
 }
